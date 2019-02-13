@@ -12,6 +12,7 @@ public class MessageParser {
     static String rejectionReason;
 
     public MT195Message generateAcknowledgementMessage(MT101Message message){
+        LOGGER.info("Generating an acknowledgement message");
         MT195Message mt195Message = new MT195Message();
 
         Block1 block1 = new Block1();

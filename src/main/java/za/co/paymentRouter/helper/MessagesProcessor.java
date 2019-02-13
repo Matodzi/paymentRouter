@@ -35,6 +35,7 @@ public class MessagesProcessor {
 
             LOGGER.info("Sending payment to settlement engine...");
             settlementEngine.makePayment(paymentDestination);
+            mt195Message = null;
         }else {
             LOGGER.info("Message was rejected..");
             mt195Message = messageParser.generateAcknowledgementMessage(message);
